@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Simple Sidebar - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+
+    <!-- FlatIcon CSS -->
+    <link href="flaticon/flaticon.css" rel="stylesheet">
+    <!-- FlatIcon CSS -->
+    <link href="fontcustom/fontcustom.css" rel="stylesheet">
+
+    <style>
+        #modal-canvas{
+            border: 1px solid #000;
+            margin: 0 auto;
+        }
+        .modal-dialog{
+            width: 835px;
+        }
+        /*.modal-content{*/
+            /*width: 900px;*/
+        /*}*/
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="false">
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+
+                                画笔选项
+
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body">
+                            <label for="drawing-line-width">线条宽度:</label>
+                            <span id="drawing-line-width-val" class="info">30</span><input type="range" value="30" min="0" max="150" id="drawing-line-width"><br>
+
+                            <label for="drawing-color">线条颜色:</label>
+                            <input type="color" value="#005E7A" id="drawing-color"><br>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title">
+                            文本选项
+                        </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">
+                            <textarea id="text-content" rows="5" style="width:100%"></textarea><br>
+                            <label for="text-color">文本颜色:</label>
+                            <input type="color" value="#005E7A" id="text-color"><br>
+                            <button id="text-add">添加到画板</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingThree">
+                        <h4 class="panel-title">
+                            图案选项
+                        </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                        <div id="stamp-box" class="panel-body">
+                            <button id="alarm55" class="btn btn-default btn-sm">
+                                <span class="icon-alarm55 size-24"></span>
+                            </button>
+                            <button id="angel7" class="btn btn-default btn-sm">
+                                <span class="icon-angel7 size-24"></span>
+                            </button>
+                            <button id="bag40" class="btn btn-default btn-sm">
+                                <span class="icon-bag40 size-24"></span>
+                            </button>
+                            <button id="penguin4" class="btn btn-default btn-sm">
+                                <span class="icon-penguin4 size-24"></span>
+                            </button>
+                            <button id="bell47" class="btn btn-default btn-sm">
+                                <span class="icon-bell47 size-24"></span>
+                            </button>
+                            <button id="bell48" class="btn btn-default btn-sm">
+                                <span class="icon-bell48 size-24"></span>
+                            </button>
+                            <button id="bell49" class="btn btn-default btn-sm">
+                                <span class="icon-bell49 size-24"></span>
+                            </button>
+                            <button id="bell50" class="btn btn-default btn-sm">
+                                <span class="icon-bell50 size-24"></span>
+                            </button>
+                            <button id="bible4" class="btn btn-default btn-sm">
+                                <span class="icon-bible4 size-24"></span>
+                            </button>
+                            <button id="cake17" class="btn btn-default btn-sm">
+                                <span class="icon-cake17 size-24"></span>
+                            </button>
+                            <button id="calendar167" class="btn btn-default btn-sm">
+                                <span class="icon-calendar167 size-24"></span>
+                            </button>
+                            <button id="candle11" class="btn btn-default btn-sm">
+                                <span class="icon-candle11 size-24"></span>
+                            </button>
+                            <br>
+                            此处的形状和图案可由你们提供 或者我来提供
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingFour">
+                        <h4 class="panel-title">
+                            图片选项
+                        </h4>
+                    </div>
+                    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                        <button id="img-add">添加图片</button>
+                        <input style="display: none" type="file" id="files" name="files[]" multiple /><br>
+                        <div id="imgs-box" class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div id="contorl-bar" class="btn-group" role="toolbar" aria-label="...">
+
+                                <button id="tool-sidebar" type="button" class="btn btn-success" >
+                                    <span class="glyphicon glyphicon-transfer" aria-hidden="false"></span>
+                                    边栏
+                                </button>
+
+
+                                <button id="tool-save" type="button" class="btn btn-primary">
+                                    <span class="glyphicon glyphicon-floppy-disk" aria-hidden="false"></span>
+                                    保存
+                                </button>
+
+                                <button id="tool-clear" type="button" class="btn btn-danger" >
+                                    <span class="glyphicon glyphicon-trash" aria-hidden="false"></span>
+                                    清空
+                                </button>
+
+                        </div>
+                        <div id="toolbar" class="btn-group" role="toolbar" aria-label="...">
+
+
+
+                                <button id="tool-pencil" type="button" class="btn btn-default" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" data-parent="#accordion">
+                                    <span class="glyphicon glyphicon-pencil" aria-hidden="false"></span>
+                                    画笔
+                                </button>
+
+
+                                <button id="tool-text" type="button" class="btn btn-default" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" data-parent="#accordion">
+                                    <span class="glyphicon glyphicon-font" aria-hidden="false"></span>
+                                    文本
+                                </button>
+
+                                <button id="tool-stamp" type="button" class="btn btn-default" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree" data-parent="#accordion">
+                                    <span class="glyphicon glyphicon-tree-conifer" aria-hidden="false"></span>
+                                    图案
+                                </button>
+
+                                <button id="tool-img" type="button" class="btn btn-default" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour" data-parent="#accordion">
+                                    <span class="glyphicon glyphicon-picture" aria-hidden="false"></span>
+                                    图片
+                                </button>
+
+
+
+                        </div>
+
+                        <p>918diy board<code>fightting!</code>.</p>
+
+                        <canvas id="canvas" width="850" height="1200" style="border:1px solid #000;  margin: 10px auto;">canvas</canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+        <!-- Modal -->
+        <div class="modal fade modal-canvas" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                    </div>
+                    <div id="canvas-box" class="modal-body">
+                        <canvas id='modal-canvas' width='800' height='400'></canvas>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button id="crop" type="button" class="btn btn-primary">填充到图案</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- fabric JavaScript -->
+    <script src="js/fabric.min.js"></script>
+
+    <!-- 918 -->
+    <script src="js/diy918.js"></script>
+
+</body>
+
+</html>
